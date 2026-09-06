@@ -84,15 +84,15 @@ export function categorizeByAge(age) {
     if (age >= 18) {
         // TODO: Create a const variable called category with value "adult"
         // const category = "adult";
-        return category;
+        return const category = "adult";
     } else if (age >= 13) {
         // TODO: Create a const variable called category with value "teen"
         // const category = "teen";
-        return category;
+        return const category = "teen";
     } else {
         // TODO: Create a const variable called category with value "child"
         // const category = "child";
-        return category;
+        return const category = "child";
     }
     
     // Note: Each 'category' variable exists only in its block {}
@@ -111,14 +111,18 @@ export function categorizeByAge(age) {
 export function calculateSum(numbers) {
     // TODO: Initialize count with let (it will change)
     // let count = 0;
+    let count = 0;
     
     // TODO: Loop through numbers and add each to count
     // for (const num of numbers) {
     //     count += num;
     // }
-    
+    for (const num of numbers) {
+        count += num;
+    }
     // TODO: Return the final count
     // return count;
+    return count;
 }
 
 /**
