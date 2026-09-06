@@ -25,9 +25,9 @@
 export function createUserConfig() {
     // TODO: Create the USER_CONFIG constant here
     // const USER_CONFIG = { ... };
-    const USER_CONFIG = { maxLoginAttempts = 3;
-        sessionTimeout = 1800;
-        theme = 'dark';
+    const USER_CONFIG = { maxLoginAttempts: 3,
+        sessionTimeout: 1800,
+        theme: 'dark',
     }
     return USER_CONFIG;
 }
