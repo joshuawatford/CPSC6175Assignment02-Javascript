@@ -213,10 +213,11 @@ export function createAndSaveUserSummary(userId) {
     return fetchUser(userId)
         .then(user => {
             const summary = { name: user.name, summary: `Profile for ${user.name}` };
-            return saveData(summary);
-        })
-        .then(result => {
-            return "Profile summary saved for ${user.name}";
+            return saveData(summary)
+
+            .then(result => {
+                return `Profile summary saved for ${user.name}`;
+            })
         });
 }
 

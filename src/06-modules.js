@@ -26,6 +26,9 @@
 // export const capitalize = (str) => {
 //     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 // };
+export const capitalize = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
 
 /**
  * TODO 2: Create a function that works with arrays
@@ -42,6 +45,10 @@
 // export const getLastItem = (array) => {
 //     return array.length > 0 ? array[array.length - 1] : null;
 // };
+export const getLastItem = (array) => {
+    return array.length > 0 ? array[array.length - 1] : null;
+};
+
 
 /**
  * TODO 3: Create a math utility function
@@ -61,6 +68,12 @@
 //     return sum / numbers.length;
 // };
 
+export const average = (numbers) => {
+    if (numbers.length === 0) return 0;
+    const sum = numbers.reduce((total, num) => total + num, 0);
+    return sum / numbers.length;
+};
+
 /**
  * TODO 4: Create a validation function
  * 
@@ -77,6 +90,9 @@
 // export const isValidPassword = (password) => {
 //     return password.length >= 8 && /\d/.test(password);
 // };
+export const isValidPassword = (password) => {
+    return password.length >= 8 && /\d/.test(password);
+};
 
 /**
  * TODO 5: Create a formatter function
@@ -95,6 +111,9 @@
 // export const formatCurrency = (amount) => {
 //     return `$${amount.toFixed(2)}`;
 // };
+export const formatCurrency = (amount) => {
+    return `$${amount.toFixed(2)}`;
+};
 
 /**
  * TODO 6: Export multiple functions at once
@@ -109,9 +128,11 @@
 // TODO: Create the functions
 // const double = (num) => num * 2;
 // const triple = (num) => num * 3;
-
+const double = (num) => num * 2;
+const triple = (num) => num * 3;
 // TODO: Export them together
 // export { double, triple };
+export { double, triple };
 
 /**
  * EXAMPLE EXPORTS - Already completed to show the pattern
