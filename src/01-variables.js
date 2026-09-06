@@ -25,7 +25,10 @@
 export function createUserConfig() {
     // TODO: Create the USER_CONFIG constant here
     // const USER_CONFIG = { ... };
-    
+    const USER_CONFIG = { maxLoginAttempts = 3;
+        sessionTimeout = 1800;
+        theme = 'dark';
+    }
     return USER_CONFIG;
 }
 
@@ -44,6 +47,7 @@ export function createUserConfig() {
 export function countActiveUsers(users) {
     // TODO: Declare userCount with let (it will change)
     // let userCount = ?;
+    let userCount = ?;
     
     // TODO: Loop through users and count active ones
     // for (const user of users) {
@@ -51,9 +55,15 @@ export function countActiveUsers(users) {
     //         userCount++;
     //     }
     // }
+    for (const user of users) {
+        if (user.isActive) {
+            userCount++;
+        }
+    }
     
     // TODO: Return the count
     // return userCount;
+    return userCount;
 }
 
 /**
