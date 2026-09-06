@@ -26,6 +26,7 @@
 export function welcomeUser(name) {
     // TODO: Use template literals to create the welcome message
     // return `Welcome back, ${name}!`;
+    return `Welcome back, ${name}!`;
 }
 
 /**
@@ -39,6 +40,7 @@ export function welcomeUser(name) {
 export function formatUserInfo(user) {
     // TODO: Use template literals to format the user info
     // return `${user.name} (${user.age} years old) from ${user.city}`;
+    return `${user.name} (${user.age} years old) from ${user.city}`;
 }
 
 /**
@@ -55,6 +57,9 @@ export function formatCartTotal(quantity, price) {
     // const total = quantity * price;
     // const roundedTotal = Math.round(total * 100) / 100;
     // return `${quantity} items × $${price} = $${roundedTotal}`;
+    const total = quantity * price;
+    const roundedTotal = Math.round(total * 100) / 100;
+    return `${quantity} items x $${price} = $${roundedTotal}`;
 }
 
 /**
@@ -79,6 +84,11 @@ export function createProductCard(product) {
     //   <p>$${product.price}</p>
     //   <p>${product.description}</p>
     // </div>`;
+    return `<div class="product-card">
+        <h3>${product.name}</h3>
+        <p>$${product.price}</p>
+        <p>${product.description}</p>
+    </div>`;
 }
 
 /**
@@ -96,6 +106,7 @@ export function createProductCard(product) {
 export function formatTask(task) {
     // TODO: Use template literals with conditional content
     // return `${task.title}${task.dueDate ? ` (Due: ${task.dueDate})` : ''}`;
+    return `${task.title}${task.dueDate ? ` (Due: ${task.dueDate})` : ''}`;
 }
 
 /**
@@ -123,6 +134,13 @@ export function generatePasswordResetEmail(user, resetLink) {
     // 
     // Best regards,
     // The Team`;
+    return `Hi ${user.name},
+            
+    Click the link below to reset your password:
+    ${resetlink}
+    
+    Best regards,
+    The Team`;
 }
 
 /**
